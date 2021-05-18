@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScreenShareIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script
+      src="https://kit.fontawesome.com/77f9a0ac97.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  </head>
+  <body>
+    <!-- <header>
+      <nav>
+        <a class="sign-in">Sign In</a>
+        <a class="sign-out">Sign Out</a>
+      </nav>
+    </header> -->
+    <header>
+      <div class="app-title">Screen Share IT.</div>
+    </header>
+    <main class="content">
+      <!-- auth modals html code bellow -->
+      <!-- <div class="auth-wrapper">
+        <div class="auth-modal">
+          <h2>Login</h2>
+          <form class="login">
+            <input type="text" name="email" placeholder="Email" />
+            <input type="text" name="password" placeholder="Password" />
+            <button>Login</button>
+            <button class="cancel-btn" type="button">Avbryt</button>
+            <p class="error"></p>
+          </form>
+          <div>
+            No account?
+            <a class="switch">Register an account</a>
+          </div>
+        </div>
+        <div class="auth-modal">
+          <h2>Register</h2>
+          <form class="register">
+            <input type="text" name="email" placeholder="Email" />
+            <input type="text" name="password" placeholder="Password" />
+            <button>Register</button>
+            <button class="cancel-btn" type="button">Avbryt</button>
+            <p class="error"></p>
+          </form>
+          <div>
+            Got an account?
+            <a class="switch">Go to login</a>
+          </div>
+        </div>
+      </div> -->
+      <!-- auth modals html code above -->
+
+      <!-- screen share it html code bellow -->
+      <section class="site-container">
+        <div class="room-box">
+          <div class="buttonContainer">
+            <button id="set-user-name" class="dashboardBtn create-roomBtn">
+              Set UserName
+            </button>
+            <button id="set-room-name" class="dashboardBtn create-roomBtn">
+              Set RoomName
+            </button>
+            <button
+              id="connect-btn"
+              class="dashboardBtn create-roomBtn"
+              style="display: none"
+            >
+              Join Room
+            </button>
+            <button id="roomsBtn" class="dashboardBtn">
+              <div id="bannerOverButton">Coming soon</div>
+              ROOMS
+            </button>
+          </div>
+        </div>
+        <div class="room-container" style="display: none">
+          <div class="whatever-wrapper">
+            <h1 class="room-name"></h1>
+          </div>
+
+          <div id="users" style="display: none">
+            <div class="users-container">
+              <div class="user-box">
+                <video autoplay muted id="localVideoCtr"></video>
+                <div class="tool-box" style="display: none">
+                  <div class="usersInfo"><h2 class="users-name">You</h2></div>
+                  <button id="btn-screenshare" class="blue">
+                    <i class="fas fa-desktop"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="other-template" class="user-box" style="display: none">
+                <video
+                  autoplay
+                  muted
+                  id="remoteVideoCtr"
+                  style="display: block"
+                ></video>
+                <div class="usersInfo"><h2 class="users-name"></h2></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </section>
+      <!-- screen share it html code above -->
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.3.3/firebase-app.js"></script>
+    <!-- <script src="/__/firebase/8.3.3/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.3.3/firebase-auth.js"></script>
+    <script src="/__/firebase/8.3.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.3.3/firebase-functions.js"></script> -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <!-- <script src="js/auth.js"></script> -->
+    <!-- screen share it js file import bellow -->
+    <script src="js/webrtc.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/app.js"></script>
+    <!-- screen share it js file import above -->
+  </body>
+</html>
